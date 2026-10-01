@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bachata Footwork Trainer</title>
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=7" />
 </head>
 <body>
   <header>
@@ -42,6 +42,32 @@
           <input type="number" id="bpm-input" value="130" min="40" max="220" />
           <span class="info-icon" tabindex="0" data-tooltip="Beats per minute of the song you're practicing to. Controls how fast the count-up runs (1 count = 60000 / BPM milliseconds).">ⓘ</span>
         </label>
+
+        <details class="bpm-examples">
+          <summary>🎵 Example songs by BPM</summary>
+          <ul>
+            <li><span class="bpm-tag">122</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Ll%C3%A9vame%20Contigo" target="_blank" rel="noopener">Llévame Contigo</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">123</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Propuesta%20Indecente" target="_blank" rel="noopener">Propuesta Indecente</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">123</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Suegra" target="_blank" rel="noopener">Suegra</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">123</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Prince%20Royce%20Estocolmo" target="_blank" rel="noopener">Estocolmo</a> <span class="bpm-artist">— Romeo Santos &amp; Prince Royce</span></li>
+            <li><span class="bpm-tag">124</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20El%20Papel%20Parte%201" target="_blank" rel="noopener">El Papel, Parte 1</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">124</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Ay%C3%BAdame" target="_blank" rel="noopener">Ayúdame</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">126</span> <a href="https://music.youtube.com/search?q=Prince%20Royce%20El%20Amor%20Que%20Perdimos" target="_blank" rel="noopener">El Amor Que Perdimos</a> <span class="bpm-artist">— Prince Royce</span></li>
+            <li><span class="bpm-tag">127</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Tuyo" target="_blank" rel="noopener">Tuyo</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">127</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Prince%20Royce%20Blanca%20Nieves" target="_blank" rel="noopener">Blanca Nieves</a> <span class="bpm-artist">— Romeo Santos &amp; Prince Royce</span></li>
+            <li><span class="bpm-tag">127</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Prince%20Royce%20Dardos" target="_blank" rel="noopener">Dardos</a> <span class="bpm-artist">— Romeo Santos &amp; Prince Royce</span></li>
+            <li><span class="bpm-tag">127</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Prince%20Royce%20Lokita%20Por%20Mi" target="_blank" rel="noopener">Lokita Por Mí</a> <span class="bpm-artist">— Romeo Santos &amp; Prince Royce</span></li>
+            <li><span class="bpm-tag">128</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Amigo" target="_blank" rel="noopener">Amigo</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">128</span> <a href="https://music.youtube.com/search?q=Prince%20Royce%20Las%20Cosas%20Peque%C3%B1as" target="_blank" rel="noopener">Las Cosas Pequeñas</a> <span class="bpm-artist">— Prince Royce</span></li>
+            <li><span class="bpm-tag">130</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Inocente" target="_blank" rel="noopener">Inocente</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">130</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Boomerang" target="_blank" rel="noopener">Boomerang</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">132</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Imitadora" target="_blank" rel="noopener">Imitadora</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">132</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Mar" target="_blank" rel="noopener">Mar</a> <span class="bpm-artist">— Romeo Santos</span></li>
+            <li><span class="bpm-tag">132</span> <a href="https://music.youtube.com/search?q=Prince%20Royce%20Cita" target="_blank" rel="noopener">Cita</a> <span class="bpm-artist">— Prince Royce</span></li>
+            <li><span class="bpm-tag">132</span> <a href="https://music.youtube.com/search?q=Prince%20Royce%20Te%20Robare" target="_blank" rel="noopener">Te Robaré</a> <span class="bpm-artist">— Prince Royce</span></li>
+            <li><span class="bpm-tag">133</span> <a href="https://music.youtube.com/search?q=Romeo%20Santos%20Promise%20Usher" target="_blank" rel="noopener">Promise (feat. Usher)</a> <span class="bpm-artist">— Romeo Santos</span></li>
+          </ul>
+        </details>
 
         <div class="trainer-buttons">
           <button id="trainer-start" type="button">Start</button>
