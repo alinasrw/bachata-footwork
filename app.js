@@ -49,13 +49,15 @@ function initTrainer() {
   let timerId = null;
   let currentCount = 0;
   let currentItem = null;
-
   let upcomingItem = null;
+  let sequencer = null;
+  let intervalMs = null;
 
   const nameEl = document.getElementById('trainer-figure-name');
   const countNumberEl = document.getElementById('trainer-count-number');
   const nextEl = document.getElementById('trainer-next-figure');
   const startButton = document.getElementById('trainer-start');
+  const pauseButton = document.getElementById('trainer-pause');
   const stopButton = document.getElementById('trainer-stop');
 
   function showItem(item, upcoming) {
@@ -67,14 +69,14 @@ function initTrainer() {
     nextEl.textContent = `Next: ${upcoming.displayName}`;
   }
 
-  function tick(sequencer, intervalMs) {
+  function tick() {
     currentCount += 1;
     if (currentCount > currentItem.countLength) {
       showItem(upcomingItem, sequencer.next());
     } else {
       countNumberEl.textContent = String(currentCount);
     }
-    timerId = setTimeout(() => tick(sequencer, intervalMs), intervalMs);
+    timerId = setTimeout(tick, intervalMs);
   }
 
   function start() {
@@ -84,23 +86,47 @@ function initTrainer() {
 
     const available = filterStepsForCountMode(STEPS, mode);
     const basicStep = getBasicStepForMode(mode);
-    const sequencer = createSequencer({ steps: available, basicStep, insertBasicBetween });
-    const intervalMs = countDurationMs(bpm);
+    sequencer = createSequencer({ steps: available, basicStep, insertBasicBetween });
+    intervalMs = countDurationMs(bpm);
 
     showItem(sequencer.next(), sequencer.next());
     startButton.disabled = true;
+    pauseButton.disabled = false;
+    pauseButton.textContent = 'Pause';
     stopButton.disabled = false;
-    timerId = setTimeout(() => tick(sequencer, intervalMs), intervalMs);
+    timerId = setTimeout(tick, intervalMs);
+  }
+
+  function togglePause() {
+    if (timerId !== null) {
+      clearTimeout(timerId);
+      timerId = null;
+      pauseButton.textContent = 'Resume';
+    } else {
+      pauseButton.textContent = 'Pause';
+      timerId = setTimeout(tick, intervalMs);
+    }
   }
 
   function stop() {
     clearTimeout(timerId);
     timerId = null;
+    sequencer = null;
+    intervalMs = null;
+    currentItem = null;
+    upcomingItem = null;
+    currentCount = 0;
+    nameEl.textContent = '—';
+    countNumberEl.textContent = '–';
+    nextEl.textContent = 'Next: —';
     startButton.disabled = false;
+    pauseButton.disabled = true;
+    pauseButton.textContent = 'Pause';
     stopButton.disabled = true;
   }
 
   startButton.addEventListener('click', start);
+  pauseButton.addEventListener('click', togglePause);
   stopButton.addEventListener('click', stop);
 }
 
