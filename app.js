@@ -29,6 +29,7 @@ function initWizard() {
       bpmInput.value = button.dataset.bpm;
       chosenSongEl.textContent = `${button.dataset.name} (${button.dataset.bpm} BPM)`;
       window.open(button.dataset.url, '_blank', 'noopener');
+      document.getElementById('trainer-start').disabled = false;
     });
   });
 }
