@@ -75,24 +75,29 @@ function initTrainer() {
   let currentCount = 0;
   let currentItem = null;
 
+  let upcomingItem = null;
+
   const nameEl = document.getElementById('trainer-figure-name');
   const countingEl = document.getElementById('trainer-figure-counting');
   const countNumberEl = document.getElementById('trainer-count-number');
+  const nextEl = document.getElementById('trainer-next-figure');
   const startButton = document.getElementById('trainer-start');
   const stopButton = document.getElementById('trainer-stop');
 
-  function showItem(item) {
+  function showItem(item, upcoming) {
     currentItem = item;
+    upcomingItem = upcoming;
     currentCount = 1;
     nameEl.textContent = item.displayName;
     countingEl.textContent = item.displayCounting;
     countNumberEl.textContent = String(currentCount);
+    nextEl.textContent = `Nächste: ${upcoming.displayName}`;
   }
 
   function tick(sequencer, intervalMs) {
     currentCount += 1;
     if (currentCount > currentItem.countLength) {
-      showItem(sequencer.next());
+      showItem(upcomingItem, sequencer.next());
     } else {
       countNumberEl.textContent = String(currentCount);
     }
@@ -114,7 +119,7 @@ function initTrainer() {
     const sequencer = createSequencer({ steps: available, basicStep, insertBasicBetween });
     const intervalMs = countDurationMs(bpm);
 
-    showItem(sequencer.next());
+    showItem(sequencer.next(), sequencer.next());
     startButton.disabled = true;
     stopButton.disabled = false;
     timerId = setTimeout(() => tick(sequencer, intervalMs), intervalMs);
