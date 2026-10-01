@@ -293,6 +293,18 @@ header h1 {
   object-fit: cover;
 }
 
+.promo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4);
+}
+
 .promo-text {
   display: flex;
   flex-direction: column;
