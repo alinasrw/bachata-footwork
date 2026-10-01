@@ -25,6 +25,42 @@ function getBasicStepForMode(mode) {
   return { ...BASIC_STEP, countLength: 4, displayName: BASIC_STEP.name, displayCounting: '1-2-3-(4)' };
 }
 
+function initWizard() {
+  const step2 = document.getElementById('wizard-step-2');
+  const step3 = document.getElementById('wizard-step-3');
+  const step4 = document.getElementById('wizard-step-4');
+  const bpmInput = document.getElementById('bpm-input');
+  const chosenSongEl = document.getElementById('chosen-song-name');
+
+  document.querySelectorAll('input[name="count-mode"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      step2.hidden = false;
+    });
+  });
+
+  document.querySelectorAll('input[name="insert-basic-choice"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      step3.hidden = false;
+    });
+  });
+
+  document.querySelectorAll('.song-option').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.song-option').forEach(b => b.classList.remove('selected'));
+      button.classList.add('selected');
+      bpmInput.value = button.dataset.bpm;
+      chosenSongEl.textContent = `${button.dataset.name} (${button.dataset.bpm} BPM)`;
+      window.open(button.dataset.url, '_blank', 'noopener');
+      step4.hidden = false;
+    });
+  });
+}
+
+function getInsertBasicBetween() {
+  const checked = document.querySelector('input[name="insert-basic-choice"]:checked');
+  return checked ? checked.value === 'yes' : true;
+}
+
 function initTrainer() {
   let timerId = null;
   let currentCount = 0;
@@ -59,7 +95,7 @@ function initTrainer() {
 
   function start() {
     const mode = getCountMode();
-    const insertBasicBetween = document.getElementById('insert-basic').checked;
+    const insertBasicBetween = getInsertBasicBetween();
     const bpm = Number(document.getElementById('bpm-input').value);
 
     const available = filterStepsForCountMode(STEPS, mode);
@@ -102,5 +138,6 @@ function initTooltips() {
 }
 
 initTabs();
+initWizard();
 initTrainer();
 initTooltips();
