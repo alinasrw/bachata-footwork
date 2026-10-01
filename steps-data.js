@@ -1,7 +1,7 @@
 export const STEPS = [
   // Basics
   { name: 'Basic', category: 'Basics', countLength: 8, countingDisplay: '1-2-3-(4), 5-6-7-(8)', description: 'Basic step: 3 steps + tap, weight shifts side to side.', doubleForEight: false },
-  { name: 'Quadrat (Cuadrado)', category: 'Basics', countLength: 8, countingDisplay: '1-2-3-4, 5-6-7-8', description: 'Steps in a square/box pattern instead of side to side.', doubleForEight: false },
+  { name: 'Cuadrado', category: 'Basics', countLength: 8, countingDisplay: '1-2-3-4, 5-6-7-8', description: 'Steps in a square/box pattern instead of side to side.', doubleForEight: false },
   { name: 'Open / Close', category: 'Basics', countLength: 4, countingDisplay: '1 (open), 2 (close), 3-4', description: 'Solo step on the spot: legs open on 1, close on 2, then normal steps on 3-4.', doubleForEight: true },
   { name: 'Side Step', category: 'Basics', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Sideways step similar to the Basic, but purely a side-to-side movement.', doubleForEight: true },
   { name: 'Side Step Sin Copa', category: 'Basics', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Side Step with reduced hip movement, more visible footwork.', doubleForEight: true },
@@ -16,7 +16,7 @@ export const STEPS = [
   { name: 'Sin copa (Basic, Triangle)', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 4, countingDisplay: '1-2-&3-4', description: 'Basic variations without hip movement, often with a triangle foot pattern.', doubleForEight: true },
   { name: 'Syncopated Step (sin copa) + Triple Step', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 4, countingDisplay: '1&2-3&4', description: 'An inserted intermediate step (triple) within the sin-copa movement.', doubleForEight: true },
   { name: 'Basic sin copa (1&2, 5&6)', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1&2-3-4, 5&6-7-8', description: 'Sin-copa variation with a triple directly on 1 and 5.', doubleForEight: false },
-  { name: 'Quadrat Cha Cha on Tap', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Quadrat with a cha-cha-style triple step at the end of each 4-count block.', doubleForEight: false },
+  { name: 'Cuadrado Cha Cha on Tap', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Cuadrado with a cha-cha-style triple step at the end of each 4-count block.', doubleForEight: false },
   { name: 'Madrid Cha Cha on Tap', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Madrid with a cha-cha-style triple step at the end of each 4-count block.', doubleForEight: false },
   { name: 'Basic Cha Cha on Tap', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Basic with a cha-cha-style triple step at the end of each 4-count block.', doubleForEight: false },
 
@@ -52,7 +52,7 @@ export const STEPS = [
   { name: 'Michael Jackson Turn', category: 'Fusion Elements', countLength: 8, countingDisplay: '1-2-3-4 (approximate)', description: 'A turn with an MJ-style spin/footwork.', doubleForEight: false },
   { name: 'Fusion Slide in Basic', category: 'Fusion Elements', countLength: 8, countingDisplay: 'varies by base figure', description: 'A slide element integrated into the Basic step.', doubleForEight: false },
   { name: 'Fusion Slide in Turn', category: 'Fusion Elements', countLength: 8, countingDisplay: 'varies by base figure', description: 'A slide element integrated into a turn.', doubleForEight: false },
-  { name: 'Fusion Shoulder', category: 'Fusion Elements', countLength: 8, countingDisplay: 'flowing over 8 counts', description: 'Shoulder isolation layered onto a base figure, e.g. Basic, Quadrat, or a Slide.', doubleForEight: false }
+  { name: 'Fusion Shoulder', category: 'Fusion Elements', countLength: 8, countingDisplay: 'flowing over 8 counts', description: 'Shoulder isolation layered onto a base figure, e.g. Basic, Cuadrado, or a Slide.', doubleForEight: false }
 ];
 
 export const BASIC_STEP = STEPS.find(step => step.name === 'Basic');
