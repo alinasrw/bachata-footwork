@@ -24,13 +24,11 @@ export function pickRandomStep(steps, rng = Math.random) {
   return steps[index];
 }
 
-const COUNT_PACE_FACTOR = 1.1;
-
 export function countDurationMs(bpm) {
   if (bpm <= 0) {
     throw new Error('BPM must be positive');
   }
-  return (60000 / bpm) * COUNT_PACE_FACTOR;
+  return 60000 / bpm;
 }
 
 export function createSequencer({ steps, basicStep, insertBasicBetween, rng = Math.random }) {
