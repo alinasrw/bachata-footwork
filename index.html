@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bachata Footwork Trainer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Bachata Footwork Trainer</h1>
+    <nav class="tabs">
+      <button class="tab-button active" data-tab="list" type="button">📋 Liste</button>
+      <button class="tab-button" data-tab="trainer" type="button">🎲 Trainer</button>
+      <button class="tab-button" data-tab="impressum" type="button">ℹ️ Impressum</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tab-list" class="tab-panel active">
+      <input type="search" id="list-search" placeholder="Step suchen..." />
+      <div id="list-content"></div>
+    </section>
+
+    <section id="tab-trainer" class="tab-panel">
+      <div class="trainer-settings">
+        <fieldset>
+          <legend>Count-Modus</legend>
+          <label><input type="radio" name="count-mode" value="4" /> 4 Counts</label>
+          <label><input type="radio" name="count-mode" value="8" checked /> 8 Counts</label>
+        </fieldset>
+        <label class="inline-toggle"><input type="checkbox" id="insert-basic" checked /> Basic dazwischen</label>
+        <label class="inline-toggle">BPM: <input type="number" id="bpm-input" value="130" min="40" max="220" /></label>
+        <fieldset id="category-filters">
+          <legend>Kategorien</legend>
+        </fieldset>
+        <div class="trainer-buttons">
+          <button id="trainer-start" type="button">Start</button>
+          <button id="trainer-stop" type="button" disabled>Stop</button>
+        </div>
+      </div>
+      <div class="trainer-display">
+        <div id="trainer-figure-name">—</div>
+        <div id="trainer-figure-counting">—</div>
+        <div id="trainer-count-number">–</div>
+      </div>
+    </section>
+
+    <section id="tab-impressum" class="tab-panel">
+      <h2>Impressum</h2>
+      <p>
+        <!-- TODO: Name & Kontakt eintragen -->
+        [Name]<br />
+        [Kontakt-E-Mail]
+      </p>
+      <h2>Datenschutz</h2>
+      <p>
+        Diese Seite sammelt, speichert oder verarbeitet selbst keine Nutzerdaten (kein Login, keine Cookies,
+        keine Formulare). Das Hosting erfolgt über GitHub Pages; GitHub protokolliert dabei serverseitig
+        technische Zugriffsdaten (z. B. IP-Adressen) gemäß der
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
+        Es werden kein Tracking, keine Analytics und keine Drittanbieter-Skripte eingesetzt.
+      </p>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
