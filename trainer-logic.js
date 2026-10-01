@@ -6,7 +6,7 @@ export function filterStepsForCountMode(steps, mode) {
       return {
         ...step,
         countLength: isDoubled ? 8 : step.countLength,
-        displayName: isDoubled ? `${step.name} (beide Seiten)` : step.name,
+        displayName: step.name,
         displayCounting: isDoubled ? `${step.countingDisplay} / ${step.countingDisplay}` : step.countingDisplay
       };
     });

@@ -19,7 +19,7 @@ test('filterStepsForCountMode in 8-mode keeps 8-count steps and doubles eligible
   assert.equal(result.length, 3);
   const madrid = result.find(s => s.name === 'Madrid');
   assert.equal(madrid.countLength, 8);
-  assert.equal(madrid.displayName, 'Madrid (beide Seiten)');
+  assert.equal(madrid.displayName, 'Madrid');
   assert.equal(madrid.displayCounting, '1-2-3-4 / 1-2-3-4');
   const basic = result.find(s => s.name === 'Basic');
   assert.equal(basic.displayName, 'Basic');
