@@ -18,13 +18,6 @@ function getCountMode() {
   return Number(document.querySelector('input[name="count-mode"]:checked').value);
 }
 
-function getBasicStepForMode(mode) {
-  if (mode === 8) {
-    return { ...BASIC_STEP, displayName: BASIC_STEP.name, displayCounting: BASIC_STEP.countingDisplay };
-  }
-  return { ...BASIC_STEP, countLength: 4, displayName: BASIC_STEP.name, displayCounting: '1-2-3-(4)' };
-}
-
 function initWizard() {
   const bpmInput = document.getElementById('bpm-input');
   const chosenSongEl = document.getElementById('chosen-song-name');
@@ -47,7 +40,8 @@ function getInsertBasicBetween() {
 
 function initTrainer() {
   let timerId = null;
-  let currentCount = 0;
+  let overallCount = 0;
+  let segmentLength = 8;
   let currentItem = null;
   let upcomingItem = null;
   let sequencer = null;
@@ -60,22 +54,22 @@ function initTrainer() {
   const pauseButton = document.getElementById('trainer-pause');
   const stopButton = document.getElementById('trainer-stop');
 
-  function showItem(item, upcoming) {
-    currentItem = item;
-    upcomingItem = upcoming;
-    currentCount = 1;
-    nameEl.textContent = item.displayName;
-    countNumberEl.textContent = String(currentCount);
-    nextEl.textContent = `Next: ${upcoming.displayName}`;
+  function swapFigure() {
+    currentItem = upcomingItem;
+    upcomingItem = sequencer.next();
+    nameEl.textContent = currentItem.displayName;
+    nextEl.textContent = `Next: ${upcomingItem.displayName}`;
   }
 
   function tick() {
-    currentCount += 1;
-    if (currentCount > currentItem.countLength) {
-      showItem(upcomingItem, sequencer.next());
-    } else {
-      countNumberEl.textContent = String(currentCount);
+    overallCount += 1;
+    if (overallCount > 8) {
+      overallCount = 1;
     }
+    if ((overallCount - 1) % segmentLength === 0) {
+      swapFigure();
+    }
+    countNumberEl.textContent = String(overallCount);
     timerId = setTimeout(tick, intervalMs);
   }
 
@@ -84,12 +78,19 @@ function initTrainer() {
     const insertBasicBetween = getInsertBasicBetween();
     const bpm = Number(document.getElementById('bpm-input').value);
 
+    segmentLength = mode;
     const available = filterStepsForCountMode(STEPS, mode);
-    const basicStep = getBasicStepForMode(mode);
+    const basicStep = { ...BASIC_STEP, displayName: BASIC_STEP.name, displayCounting: BASIC_STEP.countingDisplay };
     sequencer = createSequencer({ steps: available, basicStep, insertBasicBetween });
     intervalMs = countDurationMs(bpm);
 
-    showItem(sequencer.next(), sequencer.next());
+    overallCount = 1;
+    currentItem = sequencer.next();
+    upcomingItem = sequencer.next();
+    nameEl.textContent = currentItem.displayName;
+    countNumberEl.textContent = '1';
+    nextEl.textContent = `Next: ${upcomingItem.displayName}`;
+
     startButton.disabled = true;
     pauseButton.disabled = false;
     pauseButton.textContent = 'Pause';
@@ -115,7 +116,7 @@ function initTrainer() {
     intervalMs = null;
     currentItem = null;
     upcomingItem = null;
-    currentCount = 0;
+    overallCount = 0;
     nameEl.textContent = '—';
     countNumberEl.textContent = '–';
     nextEl.textContent = 'Next: —';

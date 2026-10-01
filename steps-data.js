@@ -32,7 +32,9 @@ export const STEPS = [
 
   // Cross & Slide Steps
   { name: 'Grape Vine', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4', description: 'Sideways cross steps, a well-known move from general dance vocabulary.', doubleForEight: true },
-  { name: 'Cross (on 1, 2 or 3)', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4 (crossing beat varies)', description: 'Named for which beat the cross step lands on (depends on the teacher/school).', doubleForEight: true },
+  { name: 'Cross on 1', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4', description: 'Cross step lands on count 1.', doubleForEight: true },
+  { name: 'Cross on 2', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4', description: 'Cross step lands on count 2.', doubleForEight: true },
+  { name: 'Cross on 3', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4', description: 'Cross step lands on count 3.', doubleForEight: true },
   { name: 'Puñaito', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Small, compact step with a "punching" character.', doubleForEight: true },
   { name: 'Cheat Step', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4', description: 'A trick step that disguises a change of direction.', doubleForEight: true },
   { name: 'Patín on the spot', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1&2-3&4', description: '"Skating" slide movement done stationary, on the spot.', doubleForEight: true },
