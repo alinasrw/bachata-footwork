@@ -1,55 +1,55 @@
 export const STEPS = [
-  // Grundlagen (Basics)
-  { name: 'Basic', category: 'Grundlagen (Basics)', countLength: 8, countingDisplay: '1-2-3-(4), 5-6-7-(8)', description: 'Grundschritt: 3 Schritte + Tap, Richtungswechsel seitlich.', doubleForEight: false },
-  { name: 'Quadrat (Cuadrado)', category: 'Grundlagen (Basics)', countLength: 8, countingDisplay: '1-2-3-4, 5-6-7-8', description: 'Schritte im Quadrat/Box-Muster statt seitlich.', doubleForEight: false },
-  { name: 'Open / Close', category: 'Grundlagen (Basics)', countLength: 4, countingDisplay: '1 (open), 2 (close), 3-4', description: 'Solo-Schritt am Platz: Beine öffnen auf 1, schließen auf 2, danach normale Schritte auf 3-4.', doubleForEight: true },
-  { name: 'Side Step', category: 'Grundlagen (Basics)', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Seitwärtsschritt analog zum Basic, aber reine Seitwärtsbewegung.', doubleForEight: true },
-  { name: 'Side Step Sin Copa', category: 'Grundlagen (Basics)', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Side Step mit reduzierter Hüfte, mehr Beinarbeit sichtbar.', doubleForEight: true },
+  // Basics
+  { name: 'Basic', category: 'Basics', countLength: 8, countingDisplay: '1-2-3-(4), 5-6-7-(8)', description: 'Basic step: 3 steps + tap, weight shifts side to side.', doubleForEight: false },
+  { name: 'Quadrat (Cuadrado)', category: 'Basics', countLength: 8, countingDisplay: '1-2-3-4, 5-6-7-8', description: 'Steps in a square/box pattern instead of side to side.', doubleForEight: false },
+  { name: 'Open / Close', category: 'Basics', countLength: 4, countingDisplay: '1 (open), 2 (close), 3-4', description: 'Solo step on the spot: legs open on 1, close on 2, then normal steps on 3-4.', doubleForEight: true },
+  { name: 'Side Step', category: 'Basics', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Sideways step similar to the Basic, but purely a side-to-side movement.', doubleForEight: true },
+  { name: 'Side Step Sin Copa', category: 'Basics', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Side Step with reduced hip movement, more visible footwork.', doubleForEight: true },
 
-  // Rompe & Madrid Familie
-  { name: 'Rompe adelante', category: 'Rompe & Madrid Familie', countLength: 4, countingDisplay: '1-2-3-(4)', description: '"Brich nach vorne" – Vorwärtsschritt-Variante des Basic.', doubleForEight: true },
-  { name: 'Madrid', category: 'Rompe & Madrid Familie', countLength: 8, countingDisplay: '1-2-3-4, 5-6-7-8', description: 'Kreuzschritt vorne/hinten, kein Schließen auf 2 (Unterschied zu Double Madrid).', doubleForEight: false },
-  { name: 'Double Madrid', category: 'Rompe & Madrid Familie', countLength: 8, countingDisplay: '1-2-3-4, 5-6-7-8', description: 'Wie Madrid, aber mit schließendem Schritt auf 2 (bzw. 6).', doubleForEight: false },
-  { name: 'Majao', category: 'Rompe & Madrid Familie', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Drop-Bewegung im Hüft-/Kniebereich, oft "Basic Majao" (Drop) genannt.', doubleForEight: true },
+  // Rompe & Madrid Family
+  { name: 'Rompe adelante', category: 'Rompe & Madrid Family', countLength: 4, countingDisplay: '1-2-3-(4)', description: '"Break forward" – forward-step variation of the Basic.', doubleForEight: true },
+  { name: 'Madrid', category: 'Rompe & Madrid Family', countLength: 8, countingDisplay: '1-2-3-4, 5-6-7-8', description: 'Cross step forward/backward, no closing step on 2 (difference from Double Madrid).', doubleForEight: false },
+  { name: 'Double Madrid', category: 'Rompe & Madrid Family', countLength: 8, countingDisplay: '1-2-3-4, 5-6-7-8', description: 'Like Madrid, but with a closing step on 2 (and 6).', doubleForEight: false },
+  { name: 'Majao', category: 'Rompe & Madrid Family', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Drop movement in the hips/knees, often called "Basic Majao" (Drop).', doubleForEight: true },
 
-  // Sin Copa & Syncopation (Footwork-Fokus)
-  { name: 'Sin copa (Basic, Triangle)', category: 'Sin Copa & Syncopation (Footwork-Fokus)', countLength: 4, countingDisplay: '1-2-&3-4', description: 'Basic-Varianten ohne Hüftbewegung, oft mit Triangle-Fußmuster.', doubleForEight: true },
-  { name: 'Syncopated Step (sin copa) + Triple Step', category: 'Sin Copa & Syncopation (Footwork-Fokus)', countLength: 4, countingDisplay: '1&2-3&4', description: 'Eingeschobener Zwischenschritt (Triple) in die Sin-Copa-Bewegung.', doubleForEight: true },
-  { name: 'Basic sin copa (1&2, 5&6)', category: 'Sin Copa & Syncopation (Footwork-Fokus)', countLength: 8, countingDisplay: '1&2-3-4, 5&6-7-8', description: 'Sin-Copa-Variante mit Triple direkt auf 1 und 5.', doubleForEight: false },
-  { name: 'Quadrat/Madrid/Basic mit Triple Step (Cha Cha)', category: 'Sin Copa & Syncopation (Footwork-Fokus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Cha-Cha-artiger Triple Step am Ende jedes 4er-Blocks, anwendbar auf Quadrat/Madrid/Basic.', doubleForEight: false },
+  // Sin Copa & Syncopation (Footwork Focus)
+  { name: 'Sin copa (Basic, Triangle)', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 4, countingDisplay: '1-2-&3-4', description: 'Basic variations without hip movement, often with a triangle foot pattern.', doubleForEight: true },
+  { name: 'Syncopated Step (sin copa) + Triple Step', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 4, countingDisplay: '1&2-3&4', description: 'An inserted intermediate step (triple) within the sin-copa movement.', doubleForEight: true },
+  { name: 'Basic sin copa (1&2, 5&6)', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1&2-3-4, 5&6-7-8', description: 'Sin-copa variation with a triple directly on 1 and 5.', doubleForEight: false },
+  { name: 'Quadrat/Madrid/Basic with Triple Step (Cha Cha)', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Cha-cha-style triple step at the end of each 4-count block, applicable to Quadrat/Madrid/Basic.', doubleForEight: false },
 
-  // Hüfte & Körperbewegung
-  { name: 'Contra Cadero', category: 'Hüfte & Körperbewegung', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Gegenläufige Hüftbewegung zum Schritt (Kennzeichen des Bachata-Stils).', doubleForEight: true },
-  { name: 'Caballito (Pferdchen)', category: 'Hüfte & Körperbewegung', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Hüpfende, pferdeähnliche Hüftbewegung, oft als Übergang ("Caballito Up").', doubleForEight: true },
+  // Hip & Body Movement
+  { name: 'Contra Cadero', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Hip movement opposing the step direction (a signature trait of the Bachata style).', doubleForEight: true },
+  { name: 'Caballito (little horse)', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Bouncy, horse-like hip movement, often used as a transition ("Caballito Up").', doubleForEight: true },
 
-  // Tap-, Heel- & Toe-Varianten
-  { name: 'Double Tap', category: 'Tap-, Heel- & Toe-Varianten', countLength: 4, countingDisplay: '1-2-3-4&4', description: 'Basic mit doppeltem Tap statt einfachem.', doubleForEight: true },
-  { name: 'Double Tap Turn (Backwards)', category: 'Tap-, Heel- & Toe-Varianten', countLength: 4, countingDisplay: '1-2-3-4&4', description: 'Double Tap kombiniert mit rückwärtiger Drehung.', doubleForEight: true },
-  { name: 'Heel & Toe (sin copa & am Platz)', category: 'Tap-, Heel- & Toe-Varianten', countLength: 4, countingDisplay: '1-2-3-4', description: 'Abwechselndes Aufsetzen von Ferse und Fußspitze, stationär oder mit Sin Copa.', doubleForEight: true },
-  { name: 'V-Step', category: 'Tap-, Heel- & Toe-Varianten', countLength: 4, countingDisplay: '1-2-3-4', description: 'Füße bilden ein V: raus-raus-rein-rein.', doubleForEight: true },
+  // Tap, Heel & Toe Variations
+  { name: 'Double Tap', category: 'Tap, Heel & Toe Variations', countLength: 4, countingDisplay: '1-2-3-4&4', description: 'Basic with a double tap instead of a single one.', doubleForEight: true },
+  { name: 'Double Tap Turn (Backwards)', category: 'Tap, Heel & Toe Variations', countLength: 4, countingDisplay: '1-2-3-4&4', description: 'Double Tap combined with a backward turn.', doubleForEight: true },
+  { name: 'Heel & Toe (sin copa & on the spot)', category: 'Tap, Heel & Toe Variations', countLength: 4, countingDisplay: '1-2-3-4', description: 'Alternating heel and toe placement, stationary or with sin copa.', doubleForEight: true },
+  { name: 'V-Step', category: 'Tap, Heel & Toe Variations', countLength: 4, countingDisplay: '1-2-3-4', description: 'Feet form a V: out-out-in-in.', doubleForEight: true },
 
-  // Kreuz- & Gleitschritte
-  { name: 'Grape Vine (Cross Side)', category: 'Kreuz- & Gleitschritte', countLength: 4, countingDisplay: '1-2-3-4', description: 'Kreuzschritte seitlich, wie im Grundtanz-Vokabular bekannt.', doubleForEight: true },
-  { name: 'Cross (on 1, 2 oder 3)', category: 'Kreuz- & Gleitschritte', countLength: 4, countingDisplay: '1-2-3-4 (Kreuzung variabel)', description: 'Benennung richtet sich danach, auf welchem Beat der Kreuzschritt passiert (lehrerabhängig).', doubleForEight: true },
-  { name: 'Puñaito', category: 'Kreuz- & Gleitschritte', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Kleiner, kompakter Schritt mit "Stoß"-Charakter.', doubleForEight: true },
-  { name: 'Cheat Step', category: 'Kreuz- & Gleitschritte', countLength: 4, countingDisplay: '1-2-3-4', description: 'Trick-/Täuschungsschritt, der eine Richtungsänderung "versteckt".', doubleForEight: true },
-  { name: 'Patín (on the spot, to the side)', category: 'Kreuz- & Gleitschritte', countLength: 4, countingDisplay: '1&2-3&4', description: '"Schlittschuh"-Gleitbewegung, variabel stationär oder seitlich.', doubleForEight: true },
+  // Cross & Slide Steps
+  { name: 'Grape Vine (Cross Side)', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4', description: 'Sideways cross steps, a well-known move from general dance vocabulary.', doubleForEight: true },
+  { name: 'Cross (on 1, 2 or 3)', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4 (crossing beat varies)', description: 'Named for which beat the cross step lands on (depends on the teacher/school).', doubleForEight: true },
+  { name: 'Puñaito', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Small, compact step with a "punching" character.', doubleForEight: true },
+  { name: 'Cheat Step', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4', description: 'A trick step that disguises a change of direction.', doubleForEight: true },
+  { name: 'Patín (on the spot, to the side)', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1&2-3&4', description: '"Skating" slide movement, done stationary or sideways.', doubleForEight: true },
 
   // Tiki Taka & Kicks
-  { name: 'Tiki Tak', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1&2&3&4&', description: 'Schnelle Wechselschritte ("Trommelwirbel" der Füße), am Platz wiederholbar.', doubleForEight: true },
-  { name: 'Kick (normal)', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1-2-3-4', description: 'Einfacher Kick am Ende des Blocks.', doubleForEight: true },
-  { name: 'Kick Cross', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1-2-3-4', description: 'Kick mit anschließender Beinkreuzung.', doubleForEight: true },
-  { name: 'Kick Slide', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1-2-3-4&', description: 'Kick kombiniert mit Gleitbewegung.', doubleForEight: true },
+  { name: 'Tiki Tak', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1&2&3&4&', description: 'Fast alternating steps ("drum roll" of the feet), repeatable on the spot.', doubleForEight: true },
+  { name: 'Kick (normal)', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1-2-3-4', description: 'Simple kick at the end of the block.', doubleForEight: true },
+  { name: 'Kick Cross', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1-2-3-4', description: 'Kick followed by a leg cross.', doubleForEight: true },
+  { name: 'Kick Slide', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1-2-3-4&', description: 'Kick combined with a slide movement.', doubleForEight: true },
 
-  // Drehungen & Übergänge
-  { name: 'Break Turn', category: 'Drehungen & Übergänge', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Drehung, die den Basic-Rhythmus "bricht"/unterbricht.', doubleForEight: true },
+  // Turns & Transitions
+  { name: 'Break Turn', category: 'Turns & Transitions', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'A turn that "breaks"/interrupts the Basic rhythm.', doubleForEight: true },
 
-  // Fusion-Elemente
-  { name: 'Chest Roll', category: 'Fusion-Elemente', countLength: 8, countingDisplay: 'fließend über 8 Counts', description: 'Wellenbewegung durch den Brustkorb.', doubleForEight: false },
-  { name: 'Lean & Lift', category: 'Fusion-Elemente', countLength: 8, countingDisplay: '1-2-3-4 (angenähert)', description: 'Körpergewicht lehnt sich, wird dann angehoben.', doubleForEight: false },
-  { name: 'Michael Jackson Turn', category: 'Fusion-Elemente', countLength: 8, countingDisplay: '1-2-3-4 (angenähert)', description: 'Drehung mit MJ-typischem Spin/Fußarbeit.', doubleForEight: false },
-  { name: 'Slides (in Basic, in Turn)', category: 'Fusion-Elemente', countLength: 8, countingDisplay: 'variiert je nach Grundfigur', description: 'Gleitelement, in bestehende Basics/Turns integriert.', doubleForEight: false },
-  { name: 'Fusion Wave / Shoulder Fusion', category: 'Fusion-Elemente', countLength: 8, countingDisplay: 'fließend über 8 Counts', description: 'Wellenbewegungen und Schulterisolationen auf dem Basic-Grundgerüst.', doubleForEight: false }
+  // Fusion Elements
+  { name: 'Chest Roll', category: 'Fusion Elements', countLength: 8, countingDisplay: 'flowing over 8 counts', description: 'A wave movement through the chest.', doubleForEight: false },
+  { name: 'Lean & Lift', category: 'Fusion Elements', countLength: 8, countingDisplay: '1-2-3-4 (approximate)', description: 'Body weight leans, then is lifted back up.', doubleForEight: false },
+  { name: 'Michael Jackson Turn', category: 'Fusion Elements', countLength: 8, countingDisplay: '1-2-3-4 (approximate)', description: 'A turn with an MJ-style spin/footwork.', doubleForEight: false },
+  { name: 'Slides (in Basic, in Turn)', category: 'Fusion Elements', countLength: 8, countingDisplay: 'varies by base figure', description: 'A slide element integrated into existing Basics/turns.', doubleForEight: false },
+  { name: 'Fusion Wave / Shoulder Fusion', category: 'Fusion Elements', countLength: 8, countingDisplay: 'flowing over 8 counts', description: 'Wave movements and shoulder isolations layered onto the Basic.', doubleForEight: false }
 ];
 
 export const BASIC_STEP = STEPS.find(step => step.name === 'Basic');

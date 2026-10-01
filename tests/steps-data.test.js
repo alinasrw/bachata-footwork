@@ -22,17 +22,17 @@ test('BASIC_STEP references the Basic entry with 8 counts', () => {
   assert.equal(BASIC_STEP.countLength, 8);
 });
 
-test('category names match the nine sections from BACHATA_STEPS.md', () => {
+test('category names match the nine English sections', () => {
   const categories = [...new Set(STEPS.map(step => step.category))];
   assert.deepEqual(categories, [
-    'Grundlagen (Basics)',
-    'Rompe & Madrid Familie',
-    'Sin Copa & Syncopation (Footwork-Fokus)',
-    'Hüfte & Körperbewegung',
-    'Tap-, Heel- & Toe-Varianten',
-    'Kreuz- & Gleitschritte',
+    'Basics',
+    'Rompe & Madrid Family',
+    'Sin Copa & Syncopation (Footwork Focus)',
+    'Hip & Body Movement',
+    'Tap, Heel & Toe Variations',
+    'Cross & Slide Steps',
     'Tiki Taka & Kicks',
-    'Drehungen & Übergänge',
-    'Fusion-Elemente'
+    'Turns & Transitions',
+    'Fusion Elements'
   ]);
 });

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,57 +9,80 @@
 <body>
   <header>
     <h1>Bachata Footwork Trainer</h1>
+    <div class="credit-banner">
+      Inspired by Footwork Challenge by Chicho &amp; Liza
+      (<a href="https://www.instagram.com/chichoylizaofficial/" target="_blank" rel="noopener">@chichoylizaofficial</a>)
+    </div>
     <nav class="tabs">
-      <button class="tab-button active" data-tab="list" type="button">📋 Liste</button>
-      <button class="tab-button" data-tab="trainer" type="button">🎲 Trainer</button>
-      <button class="tab-button" data-tab="impressum" type="button">ℹ️ Impressum</button>
+      <button class="tab-button active" data-tab="trainer" type="button">🎲 Trainer</button>
+      <button class="tab-button" data-tab="list" type="button">📋 Step List</button>
+      <button class="tab-button" data-tab="impressum" type="button">ℹ️ Legal Notice</button>
     </nav>
   </header>
 
   <main>
-    <section id="tab-list" class="tab-panel active">
-      <input type="search" id="list-search" placeholder="Step suchen..." />
-      <div id="list-content"></div>
-    </section>
-
-    <section id="tab-trainer" class="tab-panel">
-      <div class="trainer-settings">
+    <section id="tab-trainer" class="tab-panel active">
+      <div class="card settings-card">
         <fieldset>
-          <legend>Count-Modus</legend>
+          <legend>
+            Count Mode
+            <span class="info-icon" tabindex="0" data-tooltip="4 Counts drills single 4-beat figures. 8 Counts drills full 8-beat figures (4-count figures are shown done on both sides).">ⓘ</span>
+          </legend>
           <label><input type="radio" name="count-mode" value="4" /> 4 Counts</label>
           <label><input type="radio" name="count-mode" value="8" checked /> 8 Counts</label>
         </fieldset>
-        <label class="inline-toggle"><input type="checkbox" id="insert-basic" checked /> Basic dazwischen</label>
-        <label class="inline-toggle">BPM: <input type="number" id="bpm-input" value="130" min="40" max="220" /></label>
+
+        <label class="inline-toggle">
+          <input type="checkbox" id="insert-basic" checked />
+          Insert Basic between figures
+          <span class="info-icon" tabindex="0" data-tooltip="When on, a plain Basic step is shown between every two random figures, giving you a breather and a rhythm anchor.">ⓘ</span>
+        </label>
+
+        <label class="inline-toggle">
+          BPM
+          <input type="number" id="bpm-input" value="130" min="40" max="220" />
+          <span class="info-icon" tabindex="0" data-tooltip="Beats per minute of the song you're practicing to. Controls how fast the count-up runs (1 count = 60000 / BPM milliseconds).">ⓘ</span>
+        </label>
+
         <fieldset id="category-filters">
-          <legend>Kategorien</legend>
+          <legend>
+            Categories
+            <span class="info-icon" tabindex="0" data-tooltip="Pick which groups of figures the trainer is allowed to pull from. Uncheck a group to skip it.">ⓘ</span>
+          </legend>
         </fieldset>
+
         <div class="trainer-buttons">
           <button id="trainer-start" type="button">Start</button>
           <button id="trainer-stop" type="button" disabled>Stop</button>
         </div>
       </div>
-      <div class="trainer-display">
+
+      <div class="card trainer-display">
         <div id="trainer-figure-name">—</div>
         <div id="trainer-figure-counting">—</div>
         <div id="trainer-count-number">–</div>
-        <div id="trainer-next-figure" class="trainer-next">Nächste: —</div>
+        <div id="trainer-next-figure" class="trainer-next">Next: —</div>
       </div>
     </section>
 
+    <section id="tab-list" class="tab-panel">
+      <input type="search" id="list-search" placeholder="Search a step..." />
+      <div id="list-content"></div>
+    </section>
+
     <section id="tab-impressum" class="tab-panel">
-      <h2>Impressum</h2>
+      <h2>Legal Notice</h2>
       <p>
         Alina Sacharow<br />
         alinasacharow@hotmail.de
       </p>
-      <h2>Datenschutz</h2>
+      <h2>Privacy</h2>
       <p>
-        Diese Seite sammelt, speichert oder verarbeitet selbst keine Nutzerdaten (kein Login, keine Cookies,
-        keine Formulare). Das Hosting erfolgt über GitHub Pages; GitHub protokolliert dabei serverseitig
-        technische Zugriffsdaten (z. B. IP-Adressen) gemäß der
+        This site does not collect, store, or process any user data itself (no login, no cookies,
+        no forms). Hosting is provided by GitHub Pages; GitHub logs technical access data
+        server-side (e.g. IP addresses) per the
         <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a>.
-        Es werden kein Tracking, keine Analytics und keine Drittanbieter-Skripte eingesetzt.
+        No tracking, analytics, or third-party scripts are used.
       </p>
     </section>
   </main>

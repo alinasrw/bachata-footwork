@@ -22,7 +22,7 @@ function renderList(query) {
   container.innerHTML = groups.map(group => `
     <h2>${group.category}</h2>
     <table>
-      <thead><tr><th>Step</th><th>Counting</th><th>Beschreibung</th></tr></thead>
+      <thead><tr><th>Step</th><th>Counting</th><th>Description</th></tr></thead>
       <tbody>
         ${group.steps.map(step => `
           <tr>
@@ -91,7 +91,7 @@ function initTrainer() {
     nameEl.textContent = item.displayName;
     countingEl.textContent = item.displayCounting;
     countNumberEl.textContent = String(currentCount);
-    nextEl.textContent = `Nächste: ${upcoming.displayName}`;
+    nextEl.textContent = `Next: ${upcoming.displayName}`;
   }
 
   function tick(sequencer, intervalMs) {
@@ -112,7 +112,7 @@ function initTrainer() {
 
     const available = filterByCategories(filterStepsForCountMode(STEPS, mode), activeCategories);
     if (available.length === 0) {
-      alert('Keine Steps für die aktuelle Auswahl verfügbar. Bitte Kategorien anpassen.');
+      alert('No steps available for the current selection. Please adjust the categories.');
       return;
     }
     const basicStep = getBasicStepForMode(mode);
@@ -136,6 +136,24 @@ function initTrainer() {
   stopButton.addEventListener('click', stop);
 }
 
+function initTooltips() {
+  const icons = document.querySelectorAll('.info-icon');
+  icons.forEach(icon => {
+    icon.addEventListener('click', event => {
+      event.stopPropagation();
+      const wasActive = icon.classList.contains('active');
+      icons.forEach(other => other.classList.remove('active'));
+      if (!wasActive) {
+        icon.classList.add('active');
+      }
+    });
+  });
+  document.addEventListener('click', () => {
+    icons.forEach(icon => icon.classList.remove('active'));
+  });
+}
+
 initTabs();
 initList();
 initTrainer();
+initTooltips();
