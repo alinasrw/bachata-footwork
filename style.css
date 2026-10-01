@@ -227,3 +227,39 @@ header h1 {
 .info-icon.active::after {
   opacity: 1;
 }
+
+.promo-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--accent), #7a2dff);
+  border-radius: 1rem;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 6px 20px rgba(255, 61, 129, 0.25);
+}
+
+.promo-logo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.9rem;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.promo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.promo-text strong {
+  font-size: 1.1rem;
+}
+
+.promo-text span {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
