@@ -80,7 +80,10 @@ function initTrainer() {
     const bpm = Number(document.getElementById('bpm-input').value);
 
     segmentLength = mode;
-    const available = filterStepsForCountMode(STEPS, mode);
+    let available = filterStepsForCountMode(STEPS, mode);
+    if (insertBasicBetween) {
+      available = available.filter(step => step.name !== 'Basic');
+    }
     const basicStep = { ...BASIC_STEP, displayName: BASIC_STEP.name, displayCounting: BASIC_STEP.countingDisplay };
     sequencer = createSequencer({ steps: available, basicStep, insertBasicBetween });
     intervalMs = countDurationMs(bpm);
