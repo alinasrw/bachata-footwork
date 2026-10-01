@@ -49,7 +49,7 @@ export const STEPS = [
   { name: 'Lean & Lift', category: 'Fusion Elements', countLength: 8, countingDisplay: '1-2-3-4 (approximate)', description: 'Body weight leans, then is lifted back up.', doubleForEight: false },
   { name: 'Michael Jackson Turn', category: 'Fusion Elements', countLength: 8, countingDisplay: '1-2-3-4 (approximate)', description: 'A turn with an MJ-style spin/footwork.', doubleForEight: false },
   { name: 'Slides (in Basic, in Turn)', category: 'Fusion Elements', countLength: 8, countingDisplay: 'varies by base figure', description: 'A slide element integrated into existing Basics/turns.', doubleForEight: false },
-  { name: 'Fusion Wave / Shoulder Fusion', category: 'Fusion Elements', countLength: 8, countingDisplay: 'flowing over 8 counts', description: 'Wave movements and shoulder isolations layered onto the Basic.', doubleForEight: false }
+  { name: 'Fusion Shoulder', category: 'Fusion Elements', countLength: 8, countingDisplay: 'flowing over 8 counts', description: 'Shoulder isolation layered onto a base figure, e.g. Basic, Quadrat, or a Slide.', doubleForEight: false }
 ];
 
 export const BASIC_STEP = STEPS.find(step => step.name === 'Basic');
