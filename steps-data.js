@@ -22,7 +22,7 @@ export const STEPS = [
 
   // Hip & Body Movement
   { name: 'Contra de Cadera', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Hip movement opposing the step direction (a signature trait of the Bachata style).', doubleForEight: true },
-  { name: 'Caballito (little horse)', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Bouncy, horse-like hip movement, often used as a transition ("Caballito Up").', doubleForEight: true },
+  { name: 'Caballito', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Bouncy, horse-like hip movement, often used as a transition ("Caballito Up").', doubleForEight: true },
 
   // Tap, Heel & Toe Variations
   { name: 'Double Tap', category: 'Tap, Heel & Toe Variations', countLength: 4, countingDisplay: '1-2-3-4&4', description: 'Basic with a double tap instead of a single one.', doubleForEight: true },
