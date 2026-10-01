@@ -61,6 +61,13 @@ function getCountMode() {
   return Number(document.querySelector('input[name="count-mode"]:checked').value);
 }
 
+function getBasicStepForMode(mode) {
+  if (mode === 8) {
+    return { ...BASIC_STEP, displayName: BASIC_STEP.name, displayCounting: BASIC_STEP.countingDisplay };
+  }
+  return { ...BASIC_STEP, countLength: 4, displayName: BASIC_STEP.name, displayCounting: '1-2-3-(4)' };
+}
+
 function initTrainer() {
   initCategoryFilters();
 
@@ -103,7 +110,7 @@ function initTrainer() {
       alert('Keine Steps für die aktuelle Auswahl verfügbar. Bitte Kategorien anpassen.');
       return;
     }
-    const basicStep = filterStepsForCountMode([BASIC_STEP], mode)[0];
+    const basicStep = getBasicStepForMode(mode);
     const sequencer = createSequencer({ steps: available, basicStep, insertBasicBetween });
     const intervalMs = countDurationMs(bpm);
 
