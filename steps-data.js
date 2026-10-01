@@ -16,7 +16,9 @@ export const STEPS = [
   { name: 'Sin copa (Basic, Triangle)', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 4, countingDisplay: '1-2-&3-4', description: 'Basic variations without hip movement, often with a triangle foot pattern.', doubleForEight: true },
   { name: 'Syncopated Step (sin copa) + Triple Step', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 4, countingDisplay: '1&2-3&4', description: 'An inserted intermediate step (triple) within the sin-copa movement.', doubleForEight: true },
   { name: 'Basic sin copa (1&2, 5&6)', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1&2-3-4, 5&6-7-8', description: 'Sin-copa variation with a triple directly on 1 and 5.', doubleForEight: false },
-  { name: 'Quadrat/Madrid/Basic with Triple Step (Cha Cha)', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Cha-cha-style triple step at the end of each 4-count block, applicable to Quadrat/Madrid/Basic.', doubleForEight: false },
+  { name: 'Quadrat Cha Cha on Tap', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Quadrat with a cha-cha-style triple step at the end of each 4-count block.', doubleForEight: false },
+  { name: 'Madrid Cha Cha on Tap', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Madrid with a cha-cha-style triple step at the end of each 4-count block.', doubleForEight: false },
+  { name: 'Basic Cha Cha on Tap', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Basic with a cha-cha-style triple step at the end of each 4-count block.', doubleForEight: false },
 
   // Hip & Body Movement
   { name: 'Contra Cadero', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Hip movement opposing the step direction (a signature trait of the Bachata style).', doubleForEight: true },

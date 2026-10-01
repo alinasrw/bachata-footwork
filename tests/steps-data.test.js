@@ -2,8 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { STEPS, BASIC_STEP } from '../steps-data.js';
 
-test('STEPS contains exactly 34 entries', () => {
-  assert.equal(STEPS.length, 34);
+test('STEPS contains exactly 36 entries', () => {
+  assert.equal(STEPS.length, 36);
 });
 
 test('every step has the required fields with correct types', () => {
