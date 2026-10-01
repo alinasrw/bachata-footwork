@@ -21,7 +21,7 @@ export const STEPS = [
   { name: 'Basic Cha Cha on Tap', category: 'Sin Copa & Syncopation (Footwork Focus)', countLength: 8, countingDisplay: '1-2-3&4, 5-6-7&8', description: 'Basic with a cha-cha-style triple step at the end of each 4-count block.', doubleForEight: false },
 
   // Hip & Body Movement
-  { name: 'Contra Cadero', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Hip movement opposing the step direction (a signature trait of the Bachata style).', doubleForEight: true },
+  { name: 'Contra de Cadera', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Hip movement opposing the step direction (a signature trait of the Bachata style).', doubleForEight: true },
   { name: 'Caballito (little horse)', category: 'Hip & Body Movement', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Bouncy, horse-like hip movement, often used as a transition ("Caballito Up").', doubleForEight: true },
 
   // Tap, Heel & Toe Variations
