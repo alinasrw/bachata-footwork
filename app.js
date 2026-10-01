@@ -1,5 +1,6 @@
-import { STEPS } from './steps-data.js';
+import { STEPS, BASIC_STEP } from './steps-data.js';
 import { groupStepsByCategory, filterStepsByName } from './list-render.js';
+import { filterStepsForCountMode, filterByCategories, countDurationMs, createSequencer } from './trainer-logic.js';
 
 function initTabs() {
   const buttons = document.querySelectorAll('.tab-button');
@@ -41,5 +42,88 @@ function initList() {
   searchInput.addEventListener('input', () => renderList(searchInput.value));
 }
 
+function initCategoryFilters() {
+  const fieldset = document.getElementById('category-filters');
+  const categories = [...new Set(STEPS.map(step => step.category))];
+  fieldset.innerHTML = categories.map(category => `
+    <label>
+      <input type="checkbox" class="category-checkbox" value="${category}" checked />
+      ${category}
+    </label>
+  `).join('');
+}
+
+function getActiveCategories() {
+  return [...document.querySelectorAll('.category-checkbox:checked')].map(checkbox => checkbox.value);
+}
+
+function getCountMode() {
+  return Number(document.querySelector('input[name="count-mode"]:checked').value);
+}
+
+function initTrainer() {
+  initCategoryFilters();
+
+  let timerId = null;
+  let currentCount = 0;
+  let currentItem = null;
+
+  const nameEl = document.getElementById('trainer-figure-name');
+  const countingEl = document.getElementById('trainer-figure-counting');
+  const countNumberEl = document.getElementById('trainer-count-number');
+  const startButton = document.getElementById('trainer-start');
+  const stopButton = document.getElementById('trainer-stop');
+
+  function showItem(item) {
+    currentItem = item;
+    currentCount = 1;
+    nameEl.textContent = item.displayName;
+    countingEl.textContent = item.displayCounting;
+    countNumberEl.textContent = String(currentCount);
+  }
+
+  function tick(sequencer, intervalMs) {
+    currentCount += 1;
+    if (currentCount > currentItem.countLength) {
+      showItem(sequencer.next());
+    } else {
+      countNumberEl.textContent = String(currentCount);
+    }
+    timerId = setTimeout(() => tick(sequencer, intervalMs), intervalMs);
+  }
+
+  function start() {
+    const mode = getCountMode();
+    const activeCategories = getActiveCategories();
+    const insertBasicBetween = document.getElementById('insert-basic').checked;
+    const bpm = Number(document.getElementById('bpm-input').value);
+
+    const available = filterByCategories(filterStepsForCountMode(STEPS, mode), activeCategories);
+    if (available.length === 0) {
+      alert('Keine Steps für die aktuelle Auswahl verfügbar. Bitte Kategorien anpassen.');
+      return;
+    }
+    const basicStep = filterStepsForCountMode([BASIC_STEP], mode)[0];
+    const sequencer = createSequencer({ steps: available, basicStep, insertBasicBetween });
+    const intervalMs = countDurationMs(bpm);
+
+    showItem(sequencer.next());
+    startButton.disabled = true;
+    stopButton.disabled = false;
+    timerId = setTimeout(() => tick(sequencer, intervalMs), intervalMs);
+  }
+
+  function stop() {
+    clearTimeout(timerId);
+    timerId = null;
+    startButton.disabled = false;
+    stopButton.disabled = true;
+  }
+
+  startButton.addEventListener('click', start);
+  stopButton.addEventListener('click', stop);
+}
+
 initTabs();
 initList();
+initTrainer();
