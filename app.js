@@ -1,5 +1,5 @@
-import { STEPS, BASIC_STEP } from './steps-data.js';
-import { filterStepsForCountMode, countDurationMs, createSequencer } from './trainer-logic.js';
+import { STEPS, BASIC_STEP } from './steps-data.js?v=2';
+import { filterStepsForCountMode, countDurationMs, createSequencer } from './trainer-logic.js?v=2';
 
 function initTabs() {
   const buttons = document.querySelectorAll('.tab-button');
