@@ -35,7 +35,8 @@ export const STEPS = [
   { name: 'Cross (on 1, 2 or 3)', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4 (crossing beat varies)', description: 'Named for which beat the cross step lands on (depends on the teacher/school).', doubleForEight: true },
   { name: 'Puñaito', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-(4)', description: 'Small, compact step with a "punching" character.', doubleForEight: true },
   { name: 'Cheat Step', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1-2-3-4', description: 'A trick step that disguises a change of direction.', doubleForEight: true },
-  { name: 'Patín (on the spot, to the side)', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1&2-3&4', description: '"Skating" slide movement, done stationary or sideways.', doubleForEight: true },
+  { name: 'Patín on the spot', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1&2-3&4', description: '"Skating" slide movement done stationary, on the spot.', doubleForEight: true },
+  { name: 'Patín to the side', category: 'Cross & Slide Steps', countLength: 4, countingDisplay: '1&2-3&4', description: '"Skating" slide movement done sideways.', doubleForEight: true },
 
   // Tiki Taka & Kicks
   { name: 'Tiki Tak', category: 'Tiki Taka & Kicks', countLength: 4, countingDisplay: '1&2&3&4&', description: 'Fast alternating steps ("drum roll" of the feet), repeatable on the spot.', doubleForEight: true },
