@@ -229,22 +229,66 @@ header h1 {
 }
 
 .promo-card {
+  display: block;
+  margin-top: 1.5rem;
+  padding: 1rem 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 0.9rem;
+  text-decoration: none;
+  color: var(--text);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.promo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, var(--accent), transparent 40%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-1px);
+  border-color: transparent;
+}
+
+.promo-card:hover::before {
+  opacity: 1;
+}
+
+.promo-card:hover .promo-arrow {
+  transform: translate(2px, -2px);
+}
+
+.promo-eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.55rem;
+}
+
+.promo-row {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  padding: 1.25rem;
-  background: linear-gradient(135deg, var(--accent), #7a2dff);
-  border-radius: 1rem;
-  text-decoration: none;
-  color: white;
-  box-shadow: 0 6px 20px rgba(255, 61, 129, 0.25);
+  gap: 0.7rem;
 }
 
 .promo-logo {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 0.9rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
   flex-shrink: 0;
   object-fit: cover;
 }
@@ -252,14 +296,26 @@ header h1 {
 .promo-text {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.1rem;
+  min-width: 0;
 }
 
-.promo-text strong {
-  font-size: 1.1rem;
-}
-
-.promo-text span {
-  font-size: 1.3rem;
+.promo-name {
+  font-size: 1rem;
   font-weight: 700;
+}
+
+.promo-tagline {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.promo-arrow {
+  margin-left: auto;
+  font-size: 1.1rem;
+  color: var(--accent);
+  transition: transform 0.2s ease;
 }
