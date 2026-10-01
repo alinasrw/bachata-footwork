@@ -166,7 +166,7 @@ header h1 {
 }
 
 #trainer-count-number {
-  font-size: 4.5rem;
+  font-size: 6.5rem;
   font-weight: bold;
   color: var(--accent);
   line-height: 1;
@@ -175,7 +175,8 @@ header h1 {
 
 .trainer-next {
   margin-top: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: var(--text-dim);
 }
 
