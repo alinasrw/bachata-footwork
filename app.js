@@ -26,23 +26,8 @@ function getBasicStepForMode(mode) {
 }
 
 function initWizard() {
-  const step2 = document.getElementById('wizard-step-2');
-  const step3 = document.getElementById('wizard-step-3');
-  const step4 = document.getElementById('wizard-step-4');
   const bpmInput = document.getElementById('bpm-input');
   const chosenSongEl = document.getElementById('chosen-song-name');
-
-  document.querySelectorAll('input[name="count-mode"]').forEach(radio => {
-    radio.addEventListener('change', () => {
-      step2.hidden = false;
-    });
-  });
-
-  document.querySelectorAll('input[name="insert-basic-choice"]').forEach(radio => {
-    radio.addEventListener('change', () => {
-      step3.hidden = false;
-    });
-  });
 
   document.querySelectorAll('.song-option').forEach(button => {
     button.addEventListener('click', () => {
@@ -51,7 +36,6 @@ function initWizard() {
       bpmInput.value = button.dataset.bpm;
       chosenSongEl.textContent = `${button.dataset.name} (${button.dataset.bpm} BPM)`;
       window.open(button.dataset.url, '_blank', 'noopener');
-      step4.hidden = false;
     });
   });
 }

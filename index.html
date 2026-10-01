@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bachata Footwork Trainer</title>
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 <body>
   <header>
@@ -30,23 +30,23 @@
               <span class="info-icon" tabindex="0" data-tooltip="4 Counts drills single 4-beat figures. 8 Counts drills full 8-beat figures (4-count figures are shown done on both sides).">ⓘ</span>
             </legend>
             <label><input type="radio" name="count-mode" value="4" /> 4 Counts</label>
-            <label><input type="radio" name="count-mode" value="8" /> 8 Counts</label>
+            <label><input type="radio" name="count-mode" value="8" checked /> 8 Counts</label>
           </fieldset>
         </div>
 
-        <div class="wizard-step" id="wizard-step-2" hidden>
+        <div class="wizard-step" id="wizard-step-2">
           <div class="step-label">Step 2</div>
           <fieldset>
             <legend>
               Do you want Basic steps in between?
               <span class="info-icon" tabindex="0" data-tooltip="When on, a plain Basic step is shown between every two random figures, giving you a breather and a rhythm anchor.">ⓘ</span>
             </legend>
-            <label><input type="radio" name="insert-basic-choice" value="yes" /> Yes</label>
+            <label><input type="radio" name="insert-basic-choice" value="yes" checked /> Yes</label>
             <label><input type="radio" name="insert-basic-choice" value="no" /> No</label>
           </fieldset>
         </div>
 
-        <div class="wizard-step" id="wizard-step-3" hidden>
+        <div class="wizard-step" id="wizard-step-3">
           <div class="step-label">Step 3</div>
           <fieldset>
             <legend>Choose your song</legend>
@@ -75,7 +75,7 @@
           </fieldset>
         </div>
 
-        <div class="wizard-step" id="wizard-step-4" hidden>
+        <div class="wizard-step" id="wizard-step-4">
           <div class="step-label">Step 4</div>
           <p class="step4-instruction">
             Listen to <strong id="chosen-song-name">—</strong> and press Start right on the first beat ("ONE").
