@@ -1,6 +1,6 @@
 # Bachata Footwork – Step-Sammlung
 
-Alle Zählungen basieren auf dem klassischen **8-Count** (1–8), wie er in Bachata Sensual / Moderna üblich ist. Ein Basic besteht aus zwei 4er-Blöcken: Schritte auf **1-2-3**, Tap auf **4**, dann **5-6-7**, Tap auf **8**.
+Alle Steps sind **Solo-Footwork** (kein Paartanz). Alle Zählungen basieren auf dem klassischen **8-Count** (1–8), wie er in Bachata Sensual / Moderna üblich ist. Ein Basic besteht aus zwei 4er-Blöcken: Schritte auf **1-2-3**, Tap auf **4**, dann **5-6-7**, Tap auf **8**.
 
 > 🔑 **Legende**
 > - **Tap** = Belastungswechsel ohne Gewichtsverlagerung (Touch)
@@ -15,7 +15,7 @@ Alle Zählungen basieren auf dem klassischen **8-Count** (1–8), wie er in Bach
 |---|---|---|
 | **Basic** | 1-2-3 (tap4), 5-6-7 (tap8) | Grundschritt: 3 Schritte + Tap, Richtungswechsel seitlich |
 | **Quadrat (Cuadrado)** | 1-2-3-4, 5-6-7-8 | Schritte im Quadrat/Box-Muster statt seitlich |
-| **Open / Close** | 1-2-3-4 (open), 5-6-7-8 (close) | Paartanz-Variante: Öffnen und Schließen der Tanzhaltung |
+| **Open / Close** | Open auf 1, Close auf 2, 3-4 normale Schritte | Solo-Schritt am Platz: Beine öffnen auf 1, schließen auf 2, danach normale Schritte auf 3-4 |
 | **Side Step** | 1-2-3-tap4 | Seitwärtsschritt analog zum Basic, aber reine Seitwärtsbewegung |
 | **Side Step Sin Copa** | 1-2-3-tap4 | Side Step mit reduzierter Hüfte, mehr Beinarbeit sichtbar |
 
