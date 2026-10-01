@@ -33,7 +33,6 @@ function initTrainer() {
   let upcomingItem = null;
 
   const nameEl = document.getElementById('trainer-figure-name');
-  const countingEl = document.getElementById('trainer-figure-counting');
   const countNumberEl = document.getElementById('trainer-count-number');
   const nextEl = document.getElementById('trainer-next-figure');
   const startButton = document.getElementById('trainer-start');
@@ -44,7 +43,6 @@ function initTrainer() {
     upcomingItem = upcoming;
     currentCount = 1;
     nameEl.textContent = item.displayName;
-    countingEl.textContent = item.displayCounting;
     countNumberEl.textContent = String(currentCount);
     nextEl.textContent = `Next: ${upcoming.displayName}`;
   }
