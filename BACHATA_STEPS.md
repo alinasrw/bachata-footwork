@@ -26,8 +26,8 @@ Alle Steps sind **Solo-Footwork** (kein Paartanz). Alle Zählungen basieren auf 
 | Step | Counting | Beschreibung |
 |---|---|---|
 | **Rompe adelante** | 1-2-3-tap4 | "Brich nach vorne" – Vorwärtsschritt-Variante des Basic |
-| **Madrid** | 1-2-3-tap4 | Kreuzschritt vorne/hinten (oft mit Fußspitze getippt), sehr verbreitet in Moderna |
-| **Double Madrid** | 1&2, 3&4 (x2) | Madrid-Schrittfolge doppelt/schneller ausgeführt |
+| **Madrid** | 1-2-3-4, 5-6-7-8 (kein Schließen auf 2) | Kreuzschritt vorne/hinten (oft mit Fußspitze getippt), sehr verbreitet in Moderna |
+| **Double Madrid** | 1-2-3-4, 5-6-7-8 (Schließen auf 2/6) | Wie Madrid, aber mit schließendem Schritt auf 2 (bzw. 6) |
 | **Majao** | 1-2-3-tap4 | Drop-Bewegung im Hüft-/Kniebereich, oft "Basic Majao" (Drop) genannt |
 
 ---
