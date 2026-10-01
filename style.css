@@ -160,10 +160,6 @@ th {
   color: var(--text);
 }
 
-#category-filters label {
-  font-size: 0.9rem;
-}
-
 .trainer-buttons {
   display: flex;
   gap: 0.75rem;

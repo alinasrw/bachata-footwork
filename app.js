@@ -1,6 +1,6 @@
 import { STEPS, BASIC_STEP } from './steps-data.js';
 import { groupStepsByCategory, filterStepsByName } from './list-render.js';
-import { filterStepsForCountMode, filterByCategories, countDurationMs, createSequencer } from './trainer-logic.js';
+import { filterStepsForCountMode, countDurationMs, createSequencer } from './trainer-logic.js';
 
 function initTabs() {
   const buttons = document.querySelectorAll('.tab-button');
@@ -42,21 +42,6 @@ function initList() {
   searchInput.addEventListener('input', () => renderList(searchInput.value));
 }
 
-function initCategoryFilters() {
-  const fieldset = document.getElementById('category-filters');
-  const categories = [...new Set(STEPS.map(step => step.category))];
-  fieldset.innerHTML = categories.map(category => `
-    <label>
-      <input type="checkbox" class="category-checkbox" value="${category}" checked />
-      ${category}
-    </label>
-  `).join('');
-}
-
-function getActiveCategories() {
-  return [...document.querySelectorAll('.category-checkbox:checked')].map(checkbox => checkbox.value);
-}
-
 function getCountMode() {
   return Number(document.querySelector('input[name="count-mode"]:checked').value);
 }
@@ -69,8 +54,6 @@ function getBasicStepForMode(mode) {
 }
 
 function initTrainer() {
-  initCategoryFilters();
-
   let timerId = null;
   let currentCount = 0;
   let currentItem = null;
@@ -106,15 +89,10 @@ function initTrainer() {
 
   function start() {
     const mode = getCountMode();
-    const activeCategories = getActiveCategories();
     const insertBasicBetween = document.getElementById('insert-basic').checked;
     const bpm = Number(document.getElementById('bpm-input').value);
 
-    const available = filterByCategories(filterStepsForCountMode(STEPS, mode), activeCategories);
-    if (available.length === 0) {
-      alert('No steps available for the current selection. Please adjust the categories.');
-      return;
-    }
+    const available = filterStepsForCountMode(STEPS, mode);
     const basicStep = getBasicStepForMode(mode);
     const sequencer = createSequencer({ steps: available, basicStep, insertBasicBetween });
     const intervalMs = countDurationMs(bpm);
