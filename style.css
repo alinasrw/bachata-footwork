@@ -86,36 +86,6 @@ header h1 {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
-}
-
-th, td {
-  text-align: left;
-  padding: 0.5rem 0.4rem;
-  border-bottom: 1px solid var(--card-border);
-  vertical-align: top;
-}
-
-th {
-  color: var(--text-dim);
-  font-weight: 600;
-  font-size: 0.85rem;
-}
-
-#list-search {
-  width: 100%;
-  padding: 0.7rem 0.9rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  border-radius: 0.75rem;
-  color: var(--text);
-}
-
 .settings-card fieldset {
   border: none;
   border-top: 1px solid var(--card-border);
