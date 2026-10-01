@@ -49,9 +49,9 @@ test('pickRandomStep throws when no steps are available', () => {
   assert.throws(() => pickRandomStep([], () => 0.5), /No steps available/);
 });
 
-test('countDurationMs converts bpm to milliseconds per count, paced 1.2x slower than raw beat time', () => {
-  assert.equal(countDurationMs(120), 600);
-  assert.equal(countDurationMs(60), 1200);
+test('countDurationMs converts bpm to milliseconds per count', () => {
+  assert.equal(countDurationMs(120), 500);
+  assert.equal(countDurationMs(60), 1000);
 });
 
 test('countDurationMs throws for non-positive bpm', () => {
